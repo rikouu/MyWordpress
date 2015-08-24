@@ -1,0 +1,415 @@
+@media screen and (min-width: @first-switch) {
+	/*!-PRESETS*/
+	.logo-center.line-content #navigation,
+	.logo-classic.line-content #navigation {
+		.transparent.disabled-transparent-bg .light-menu& {
+			border-bottom: 1px solid rgba(255,255,255,0.12);
+		}
+		.transparent.disabled-transparent-bg .dark-menu& {
+			border-bottom: 1px solid rgba(0,0,0,0.08);
+		}
+	}
+
+	#top-bar .wf-td > *,
+	#top-bar a,
+	#top-bar .mini-nav > ul > li > a:hover,
+	#top-bar .mini-search .submit,
+	.header-bottom-bar,
+	#top-bar .mini-login .submit {
+		.light-menu & {
+			color: #fff;
+		}
+		.dark-menu & {
+			color: #222222;
+		}
+	}
+	.text-near-logo, .text-near-logo *,
+	.text-near-logo a:hover,
+	.text-near-menu * {
+		#header.light-menu & {
+			color: #fff !important;
+			-webkit-text-fill-color: #fff;
+		}
+		#header.dark-menu & {
+			color: #222222 !important;
+			-webkit-text-fill-color: #222222;
+		}
+	}
+	#main-nav > li > a,
+	#main-nav > li.act > a > span,
+	#main-nav > li > a:hover,
+	#main-nav > li:hover > a,
+	#main-nav > li:hover > a > span,
+	#main-nav > li > a:hover > span {
+		#header.light-menu & {
+			color: #fff !important;
+			-webkit-text-fill-color: #fff;
+			background: none;
+		}
+		#header.dark-menu & {
+			color: #222222 !important;
+			-webkit-text-fill-color: #222222;
+			background: none;
+		}
+	}
+	#main-nav > li.menu-frame-on:hover > a {
+		#header.light-menu & {
+			border-color: rgba(255,255,255,0.2);
+		}
+		#header.dark-menu & {
+			border-color: rgba(0,0,0,0.2);
+		}
+	}
+	#main-nav > li.menu-frame-on.act > a {
+		#header.light-menu & {
+			background-color: rgba(255,255,255,0.2);
+		}
+		#header.dark-menu & {
+			background-color: rgba(0,0,0,0.2);
+		}
+	}
+	.dt-mega-menu .sub-nav .dt-mega-parent > a {
+		#header.light-menu &,
+		#header.dark-menu & {
+			color: @submenu-color !important;
+		}
+	}
+	.dt-mega-menu .sub-nav .dt-mega-parent > a:hover {
+		#header.dt-parent-menu-clickable &,
+		#header.dt-parent-menu-clickable.light-menu &,
+		#header.dt-parent-menu-clickable.dark-menu & {
+			color: @submenu-hover-color !important;
+		}
+	}
+	#main-nav > li > a > span > span.menu-subtitle,
+	#main-nav > li:hover > a > span > span.menu-subtitle {
+		#header.light-menu & {
+			color: rgba(255,255,255,0.5);
+		}
+		#header.dark-menu & {
+			color: rgba(0,0,0,0.5);
+		}
+	}
+	.text-near-logo a:hover,
+	.text-near-menu a:hover {
+		.light-menu &,
+		.dark-menu & {
+			text-decoration: underline;
+		}
+	}
+	.light-menu .sub-nav > ul > li > a,
+	.dark-menu .sub-nav > ul > li > a {
+		color: @submenu-color !important;
+	}
+	.light-menu .sub-nav > ul > li:hover > a,
+	.dark-menu .sub-nav > ul > li:hover > a {
+		color: @submenu-hover-color !important;
+	}
+	.light-menu .sub-nav > ul > li.act > a,
+	.dark-menu .sub-nav > ul > li.act > a {
+		color: @submenu-hover-color !important;
+		&:hover {
+			color: @submenu-hover-color !important;
+		}
+	}
+	#top-bar.line-content .wf-container-top,
+	.header-bottom-bar.line-content .wf-container-top,
+	#top-bar.full-width-line,
+	.header-bottom-bar.full-width-line {
+		.light-top-bar & {
+			border-color: rgba(255,255,255,0.12);
+		}
+		.dark-top-bar & {
+			border-color: rgba(0,0,0,0.08);
+		}
+	}
+	#top-bar.solid-bg,
+	.header-bottom-bar.solid-bg {
+		.light-top-bar & {
+			background-color: rgba(255,255,255,0.12);
+			background-image: none;
+		}
+		.dark-top-bar & {
+			background-color: rgba(0,0,0,0.08);
+			background-image: none;
+		}
+	}
+
+	.logo-center.line-content #navigation,
+	.logo-classic.line-content #navigation,
+	.logo-classic.full-width-line .navigation-holder,
+	.logo-center.full-width-line .navigation-holder {
+		.light-top-bar& {
+			border-top: 1px solid rgba(255,255,255,0.12);
+		}
+		.dark-top-bar& {
+			border-top: 1px solid rgba(0,0,0,0.08);
+		}
+	}
+
+	.logo-center.solid-bg .navigation-holder,
+	.logo-classic.solid-bg .navigation-holder {
+		.light-top-bar& {
+			border: none;
+			background-color: rgba(255,255,255,0.12);
+		}
+		.dark-top-bar& {
+			border: none;
+			background-color: rgba(0,0,0,0.08);
+		}
+	}
+	/*Menu hover decoration*/
+	#main-nav.underline-hover > li > a i.underline,
+	#main-nav.underline-hover.gradient-decor > li > a i.underline,
+	.brackets > li > a span:before,
+	.brackets > li.act > a span:before,
+	#main-nav > li > a span:before,
+	#main-nav > li.act > a span:before,
+	#main-nav.gradient-decor.brackets > li > a span:before,
+	#main-nav.gradient-decor.brackets > li.act > a span:before,
+	#main-nav.gradient-decor > li > a span:before,
+	#main-nav.gradient-decor > li.act > a span:before {
+		#header.light-menu-decoration & {
+			background-color: rgba(255,255,255,0.2) !important;
+			background-image: none !important;
+		}
+		#header.dark-menu-decoration & {
+			background-color: rgba(0,0,0,0.2) !important;
+			background-image: none !important;
+		}
+	}
+	
+	#top-bar .soc-ico.disabled-bg a,
+	.header-bottom-bar .soc-ico.disabled-bg a,
+	.text-near-logo .soc-ico.disabled-bg a,
+	.text-near-menu .soc-ico.disabled-bg a {
+		.light-top-bar & {
+			background-color: transparent !important;
+		}
+		.dark-top-bar & {
+			background-color: transparent !important;
+		}
+	}
+
+	#top-bar .soc-ico a,
+	.header-bottom-bar .soc-ico a {
+		.light-top-bar & {
+			background-color: rgba(255,255,255,0.12) !important;
+			background-image: none !important;
+			.box-shadow (none) !important;
+			&:hover{
+				background-color: rgba(255,255,255,0.3) !important;
+			}
+		}
+		.dark-top-bar & {
+			background-color: rgba(0,0,0,0.08) !important;
+			background-image: none !important;
+			.box-shadow (none) !important;
+			&:hover{
+				background-color: rgba(0,0,0,0.1) !important;
+			}
+		}
+	}
+
+	.text-near-logo .soc-ico a,
+	.text-near-menu .soc-ico a {
+		.light-menu & {
+			background-color: rgba(255,255,255,0.12) !important;
+			background-image: none !important;
+			.box-shadow (none) !important;
+			&:hover{
+				background-color: rgba(255,255,255,0.3) !important;
+			}
+		}
+		.dark-menu & {
+			background-color: rgba(0,0,0,0.08) !important;
+			background-image: none !important;
+			.box-shadow (none) !important;
+			&:hover{
+				background-color: rgba(0,0,0,0.2) !important;
+			}
+		}
+	}
+
+	#top-bar .soc-ico.hover-disabled-bg a,
+	.header-bottom-bar .soc-ico.hover-disabled-bg a,
+	.text-near-logo .soc-ico.hover-disabled-bg a,
+	.text-near-menu .soc-ico.hover-disabled-bg a {
+		.light-top-bar & {
+			&:hover{
+				background-color: transparent !important;
+				.box-shadow (none) !important;
+			}
+		}
+		.dark-top-bar & {
+			&:hover{
+				background-color: transparent !important;
+				.box-shadow (none) !important;
+			}
+		}
+	}
+	#top-bar .soc-ico a .icon,
+	.header-bottom-bar .soc-ico a .icon {
+		.light-menu & {
+			fill: #fff !important;
+		}
+		.dark-menu & {
+			fill: #222222 !important;
+		}
+	}
+	.text-near-logo .soc-ico a .icon,
+	.text-near-menu .soc-ico a .icon {
+		.light-menu & {
+			fill: #fff !important;
+		}
+		.dark-menu & {
+			fill: #222222 !important;
+		}
+	}
+	@light-icons: white;
+	@dark-icons: rgb(34,34,34);
+
+	#main-nav > li.has-children.level-arrows-on > a span:after {
+		#header.light-menu & {
+			@menu-arrow(white);
+		}
+		#header.dark-menu & {
+			@menu-arrow(rgba(34,34,34, 0.99));
+		}
+	}
+	.mini-search .submit:before {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.search-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.search-icon(rgba(34,34,34, 0.99));
+		}
+	}
+	.mini-search .submit.act:before {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.close-search-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.close-search-icon(rgba(34,34,34, 0.99));
+		}
+	}
+	.mini-login .submit:before {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.login-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.login-icon(@dark-icons);
+		}
+	}
+	.mini-contacts.address {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.address-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.address-icon(@dark-icons);
+		}
+	}
+	.mini-contacts.phone {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.phone-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.phone-icon(@dark-icons);
+		}
+	}
+	.mini-contacts.email {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.email-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.email-icon(@dark-icons);
+		}
+	}
+	.mini-contacts.skype {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.skype-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.skype-icon(@dark-icons);
+		}
+	}
+	.mini-contacts.clock {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.clock-icon(@light-icons);
+		}
+
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.clock-icon(@dark-icons);
+		}
+	}
+	.mini-nav .customSelectInner:before {
+		.light-menu #top-bar &,
+		.light-menu .header-bottom-bar &,
+		.light-menu .text-near-logo &,
+		.light-menu .text-near-menu & {
+			.select-ico(@light-icons);
+		}
+		.dark-menu #top-bar &,
+		.dark-menu .header-bottom-bar &,
+		.dark-menu .text-near-logo &,
+		.dark-menu .text-near-menu & {
+			.select-ico(@dark-icons);
+		}
+	}
+	/*PRESETS:end*/
+}

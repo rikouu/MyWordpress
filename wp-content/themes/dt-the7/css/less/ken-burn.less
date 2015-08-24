@@ -1,0 +1,651 @@
+/* !Basic styles */
+
+
+/*****************************************************
+	!-Ken burn effect
+******************************************************/
+
+/*Background*/
+
+/*Start Position*/
+@ken-burn-start-position-x: center;
+@ken-burn-start-position-y: top;
+
+/*End Position:*/
+@ken-burn-end-position-x: center;
+@ken-burn-end-position-y: bottom;
+
+/* Start Fit: (in %)*/
+@ken-burn-start-fit: 100%;
+
+/*End Fit: (in %)*/
+@ken-burn-end-fit: 115%;
+
+/*Duration (in ms)*/
+@ken-burn-duration: 30s;
+
+@-webkit-keyframes kb_scale_in {
+	0%{
+		background-size: @ken-burn-start-fit;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+	}
+}
+@keyframes kb_scale_in {
+	0%{
+		background-size: @ken-burn-start-fit;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+	}
+}
+
+@-webkit-keyframes kb_scale_out {
+	0%{
+		background-size: @ken-burn-end-fit;
+	}
+	50% {
+		background-size: @ken-burn-start-fit;
+	}
+	100% {
+		background-size: @ken-burn-end-fit;
+	}
+}
+@keyframes kb_scale_out {
+	0%{
+		background-size: @ken-burn-end-fit;
+	}
+	50% {
+		background-size: @ken-burn-start-fit;
+	}
+	100% {
+		background-size: @ken-burn-end-fit;
+	}
+}
+
+/* center top to center center animation */
+
+
+@-webkit-keyframes kb_center_top_to_center {
+	0%{
+		background-position: center top;
+	}
+	50% {
+		background-position: center center;
+	}
+	100% {
+		background-position: center top;
+	}
+}
+@keyframes kb_center_top_to_center {
+	0%{
+		background-position: center top;
+	}
+	50% {
+		background-position: center center;
+	}
+	100% {
+		background-position: center top;
+	}
+}
+
+.ken-burns-on.center-top-to-center-center.ken-burns-scale-in {
+	-webkit-animation: kb_center_top_to_center @ken-burn-duration infinite ease-in, kb_scale_in @ken-burn-duration infinite ease-in;
+	animation: kb_center_top_to_center @ken-burn-duration infinite ease-in, kb_scale_in @ken-burn-duration infinite ease-in;
+}
+
+.ken-burns-on.center-top-to-center-center.ken-burns-scale-out {
+	-webkit-animation: kb_center_top_to_center @ken-burn-duration infinite ease-in, kb_scale_out @ken-burn-duration infinite ease-in;
+	animation: kb_center_top_to_center @ken-burn-duration infinite ease-in, kb_scale_out @ken-burn-duration infinite ease-in;
+}
+/* center center to center top animation */
+
+@-webkit-keyframes kb_center_to_center_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+@keyframes kb_center_to_center_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+
+.ken-burns-on.center-center-to-center-top.ken-burns-scale-in {
+	-webkit-animation: kb_center_to_center_top @ken-burn-duration infinite, kb_scale_in @ken-burn-duration infinite;
+	animation: kb_center_to_center_top @ken-burn-duration infinite, kb_scale_in @ken-burn-duration infinite;
+}
+.ken-burns-on.center-center-to-center-top.ken-burns-scale-out {
+	-webkit-animation: kb_center_to_center_top @ken-burn-duration infinite, kb_scale_out @ken-burn-duration infinite;
+	animation: kb_center_to_center_top @ken-burn-duration infinite, kb_scale_out @ken-burn-duration infinite;
+}
+
+/* center bottom to center center animation */
+
+@-webkit-keyframes kb_center_bottom_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+}
+@keyframes kb_center_bottom_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+}
+
+.ken-burns-on.center-bottom-to-center-center {
+	-webkit-animation: kb_center_bottom_to_center @ken-burn-duration infinite;
+	animation: kb_center_bottom_to_center @ken-burn-duration infinite;
+}
+
+/* center to center bottom animation */
+
+@-webkit-keyframes kb_center_to_center_bottom {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+@keyframes kb_center_to_center_bottom {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+
+.ken-burns-on.center-center-to-center-bottom {
+	-webkit-animation: kb_center_to_center_bottom @ken-burn-duration infinite;
+	animation: kb_center_to_center_bottom @ken-burn-duration infinite;
+}
+
+/* center right to center animation */
+
+@-webkit-keyframes kb_center_right_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+}
+@keyframes kb_center_right_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+}
+
+.ken-burns-on.center-right-to-center-center {
+	-webkit-animation: kb_center_right_to_center @ken-burn-duration infinite;
+	animation: kb_center_right_to_center @ken-burn-duration infinite;
+}
+
+/* center to center right animation */
+
+@-webkit-keyframes kb_center_to_center_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+@keyframes kb_center_to_center_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+
+.ken-burns-on.center-center-to-center-right {
+	-webkit-animation: kb_center_to_center_right @ken-burn-duration infinite;
+	animation: kb_center_to_center_right @ken-burn-duration infinite;
+}
+
+/* center to center left animation */
+
+@-webkit-keyframes kb_center_to_center_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+@keyframes kb_center_to_center_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center center;
+	}
+}
+
+.ken-burns-on.center-center-to-center-left {
+	-webkit-animation: kb_center_to_center_left @ken-burn-duration infinite;
+	animation: kb_center_to_center_left @ken-burn-duration infinite;
+}
+
+/* center left to center animation */
+
+@-webkit-keyframes kb_center_left_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+}
+@keyframes kb_center_left_to_center {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+}
+
+.ken-burns-on.center-left-to-center-center {
+	-webkit-animation: kb_center_left_to_center @ken-burn-duration infinite;
+	animation: kb_center_left_to_center @ken-burn-duration infinite;
+}
+
+/* center left to center right animation */
+
+@-webkit-keyframes kb_center_left_to_center_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+}
+@keyframes kb_center_left_to_center_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left center;
+	}
+}
+
+.ken-burns-on.center-left-to-center-right {
+	-webkit-animation: kb_center_left_to_center_right @ken-burn-duration infinite;
+	animation: kb_center_left_to_center_right @ken-burn-duration infinite;
+}
+
+/* center right to center left animation */
+
+@-webkit-keyframes kb_center_right_to_center_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+}
+@keyframes kb_center_right_to_center_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left center;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right center;
+	}
+}
+
+.ken-burns-on.center-right-to-center-left {
+	-webkit-animation: kb_center_right_to_center_left @ken-burn-duration infinite;
+	animation: kb_center_right_to_center_left @ken-burn-duration infinite;
+}
+
+/* center bottom to center top animation */
+
+@-webkit-keyframes kb_center_bottom_to_center_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+}
+@keyframes kb_center_bottom_to_center_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center bottom;
+	}
+}
+
+.ken-burns-on.center-bottom-to-center-top {
+	-webkit-animation: kb_center_bottom_to_center_top @ken-burn-duration infinite;
+	animation: kb_center_bottom_to_center_top @ken-burn-duration infinite;
+}
+
+/* center top to center bottom animation */
+
+@-webkit-keyframes kb_center_top_to_center_bottom {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center top;
+	}
+}
+@keyframes kb_center_top_to_center_bottom {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: center top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: center bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: center top;
+	}
+}
+
+.ken-burns-on.center-top-to-center-bottom {
+	-webkit-animation: kb_center_top_to_center_bottom @ken-burn-duration infinite;
+	animation: kb_center_top_to_center_bottom @ken-burn-duration infinite;
+}
+
+/* bottom left to top right animation */
+
+@-webkit-keyframes kb_bottom_left_to_top_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left bottom;
+	}
+}
+@keyframes kb_bottom_left_to_top_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left bottom;
+	}
+}
+
+.ken-burns-on.bottom-left-to-top-right {
+	-webkit-animation: kb_bottom_left_to_top_right @ken-burn-duration infinite;
+	animation: kb_bottom_left_to_top_right @ken-burn-duration infinite;
+}
+
+/* top right to bottom left animation */
+
+@-webkit-keyframes kb_top_right_to_bottom_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right top;
+	}
+}
+@keyframes kb_top_right_to_bottom_left {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right top;
+	}
+}
+
+.ken-burns-on.top-right-to-bottom-left {
+	-webkit-animation: kb_top_right_to_bottom_left @ken-burn-duration infinite;
+	animation: kb_top_right_to_bottom_left @ken-burn-duration infinite;
+}
+
+/* top left to bottom right animation */
+
+@-webkit-keyframes kb_top_left_to_bottom_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left top;
+	}
+}
+@keyframes kb_top_left_to_bottom_right {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: left top;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: right bottom;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: left top;
+	}
+}
+
+.ken-burns-on.top-left-to-bottom-right {
+	-webkit-animation: kb_top_left_to_bottom_right @ken-burn-duration infinite;
+	animation: kb_top_left_to_bottom_right @ken-burn-duration infinite;
+}
+
+/* right bottom to left top animation */
+
+@-webkit-keyframes kb_right_bottom_to_left_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right bottom;
+	}
+}
+@keyframes kb_right_bottom_to_left_top {
+	0%{
+		background-size: @ken-burn-start-fit;
+		background-position: right bottom;
+	}
+	50% {
+		background-size: @ken-burn-end-fit;
+		background-position: left top;
+	}
+	100% {
+		background-size: @ken-burn-start-fit;
+		background-position: right bottom;
+	}
+}
+
+.ken-burns-on.bottom-right-to-top-left {
+	-webkit-animation: kb_right_bottom_to_left_top @ken-burn-duration infinite;
+	animation: kb_right_bottom_to_left_top @ken-burn-duration infinite;
+}
+/*Ken burn effect:end*/

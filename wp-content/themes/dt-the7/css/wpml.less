@@ -1,0 +1,112 @@
+/* !WPML: begin */
+	#lang_sel,
+	#lang_sel_click {
+		.border-radius;
+		background-color: fade(@h5-color, 7%);
+
+		.wf-td & {
+			background-color: fade(@top-color, 7%);
+		}
+		.text-near-menu & {
+			background-color: fade(@menu-color, 7%);
+		}
+	}
+
+	#lang_sel:hover,
+	#lang_sel_click:hover {
+		background-color: @submenu-bg-color;
+
+		-webkit-border-bottom-left-radius: 0;
+		-moz-border-bottom-left-radius:    0;
+		-ms-border-bottom-left-radius:     0;
+		-o-border-bottom-left-radius:      0;
+		border-bottom-left-radius:         0;
+
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-bottom-right-radius:    0;
+		-ms-border-bottom-right-radius:     0;
+		-o-border-bottom-right-radius:      0;
+		border-bottom-right-radius:         0;
+	}
+
+	#lang_sel li > ul,
+	#lang_sel_click li > ul {
+		background-color: @submenu-bg-color;
+
+		.border-radius;
+
+		-webkit-border-top-left-radius: 0;
+		-moz-border-top-left-radius:    0;
+		-ms-border-top-left-radius:     0;
+		-o-border-top-left-radius:      0;
+		border-top-left-radius:         0;
+
+		-webkit-border-top-right-radius: 0;
+		-moz-border-top-right-radius:    0;
+		-ms-border-top-right-radius:     0;
+		-o-border-top-right-radius:      0;
+		border-top-right-radius:         0;
+	}
+
+	@lang-color-temp: escape(~"@{h5-color}");
+	#lang_sel > ul > li:after,
+	#lang_sel_click > ul > li:after {
+		@menu-arrow(@lang-color-temp);
+	}
+
+	#lang_sel a,
+	#lang_sel_click a {
+		color: @h5-color;
+
+		.wf-td & {
+			color: @top-color;
+		}
+		.text-near-menu & {
+			color: @menu-color;
+		}
+	}
+
+	#lang_sel:hover a,
+	#lang_sel_click:hover a {
+		color: @submenu-color;
+	}
+
+	#lang_sel:hover a:hover,
+	#lang_sel_click:hover a:hover {
+		color: @submenu-hover-color;
+		background-color: fade(@submenu-color, 7%);
+	}
+
+	#lang_sel a:first-child,
+	#lang_sel_click a:first-child {
+		.border-radius;
+
+		-webkit-border-bottom-left-radius: 0;
+		-moz-border-bottom-left-radius:    0;
+		-ms-border-bottom-left-radius:     0;
+		-o-border-bottom-left-radius:      0;
+		border-bottom-left-radius:         0;
+
+		-webkit-border-bottom-right-radius: 0;
+		-moz-border-bottom-right-radius:    0;
+		-ms-border-bottom-right-radius:     0;
+		-o-border-bottom-right-radius:      0;
+		border-bottom-right-radius:         0;
+	}
+	#lang_sel a:last-child,
+	#lang_sel_click a:last-child {
+		.border-radius;
+
+		-webkit-border-top-left-radius: 0;
+		-moz-border-top-left-radius:    0;
+		-ms-border-top-left-radius:     0;
+		-o-border-top-left-radius:      0;
+		border-top-left-radius:         0;
+
+		-webkit-border-top-right-radius: 0;
+		-moz-border-top-right-radius:    0;
+		-ms-border-top-right-radius:     0;
+		-o-border-top-right-radius:      0;
+		border-top-right-radius:         0;
+	}
+/* !WPML: end */

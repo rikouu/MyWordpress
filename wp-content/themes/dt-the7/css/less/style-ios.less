@@ -1,0 +1,451 @@
+#main-slideshow.fixed:after,
+#main-slideshow.layer-fixed:after,
+#main-slideshow.fix:after {
+	.style-ios & {
+		background-color: @divider-bg-color;
+	}
+}
+.style-ios #main-slideshow.fixed:after,
+.style-ios #main-slideshow.layer-fixed:after,
+.style-ios #main-slideshow.fix:after {
+	background-color: @divider-bg-color;
+	.stripe-style-1 & {
+ 		background-color: @strype-1-divider-bg-color;
+	}
+	.stripe-style-2 & {
+ 		background-color: @strype-2-divider-bg-color;
+	}
+	.stripe-style-3 & {
+ 		background-color: @strype-3-divider-bg-color;
+	}
+	.stripe-style-4 & {
+ 		background-color: @strype-4-divider-bg-color;
+	}
+	.stripe-style-5 & {
+ 		background-color: @strype-5-divider-bg-color;
+	}
+}
+
+.style-ios .form-fields,
+.style-ios .page-nav,
+.style-ios .paginator .page-links,
+.style-ios .filter-categories,
+.style-ios .filter-extras,
+.style-ios .filter-categories.new-style a,
+.style-ios .tab-style-two,
+.style-ios #loginform input[type="text"],
+.style-ios #loginform input[type="password"] {
+	.border-radius;
+}
+
+.style-ios .form-fields span:last-child input {
+	.border-radiuses (@topright: 0, @bottomright: @border-radius-size, @bottomleft: @border-radius-size, @topleft: 0);
+}
+.style-ios .form-fields span:first-child input {
+	.border-radiuses (@topright: @border-radius-size, @bottomright: 0, @bottomleft: 0, @topleft: @border-radius-size);
+}
+
+
+.st-accordion li > a:before,
+.wpb_content_element.dt-style:not(.dt-accordion-bg-on) .wpb_accordion_header > a:before,
+h4.wpb_toggle.dt-style:before,
+.tab-style-two .wpb_tabs_nav li,
+.widget_price_filter .price_slider_wrapper .ui-widget-content,
+.custom-menu a:before {
+	.style-ios .content & {
+		background-color: fade(@base-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @divider-bg-color);
+	}
+	.style-ios .sidebar &,
+	.style-ios .stripe .sidebar-content.solid-bg & {
+		background-color: fade(@widget-sidebar-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @widget-sidebar-divider-bg-color);
+	}
+	.style-ios .footer & {
+		background-color: fade(@widget-footer-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @widget-footer-divider-bg-color);
+	}
+	.style-ios .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-1-divider-bg-color);
+	}
+	.style-ios .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-2-divider-bg-color);
+	}
+	.style-ios .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-3-divider-bg-color);
+	}
+	.style-ios .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-4-divider-bg-color);
+	}
+	.style-ios .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-5-divider-bg-color);
+	}
+}
+
+
+.soc-ico a {
+	.style-ios .content & {
+		background-color: fade(@base-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @divider-bg-color);
+	}
+	.style-ios .sidebar &,
+	.style-ios .stripe .sidebar-content.solid-bg & {
+		background-color: fade(@widget-sidebar-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @widget-sidebar-divider-bg-color);
+	}
+	.style-ios .footer & {
+		background-color: fade(@widget-footer-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @widget-footer-divider-bg-color);
+	}
+	.style-ios .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-1-divider-bg-color);
+	}
+	.style-ios .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-2-divider-bg-color);
+	}
+	.style-ios .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-3-divider-bg-color);
+	}
+	.style-ios .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-4-divider-bg-color);
+	}
+	.style-ios .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-5-divider-bg-color);
+	}
+	.style-ios #main &,
+	.style-ios #footer & {
+		&:hover {
+			background-color: @accent-bg-color;
+			.box-shadow (none);
+		}
+	}
+	.style-ios.accent-gradient #main &,
+	.style-ios.accent-gradient #footer & {
+		&:hover {
+			.background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2);
+		}
+	}
+}
+
+
+.solid-bg .sidebar-content {
+	.style-ios & {
+		border: 1px solid @widget-sidebar-divider-bg-color;
+	}
+}
+	.solid-bg.sidebar-content .widget {
+		.style-ios & {
+			border: 1px solid @widget-sidebar-divider-bg-color;
+		}
+	}
+
+.style-ios .filter-categories:not(.new-style) a:first-child,
+.style-ios .filter-sorting:first-child,
+.style-ios .paginator a:first-child {
+	.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: @border-radius-size, @topleft: @border-radius-size);
+}
+.style-ios .filter-categories:not(.new-style) a:last-child,
+.style-ios .filter-sorting:last-child,
+.style-ios .paginator a:last-child {
+	.border-radiuses (@topright: @border-radius-size, @bottomright: @border-radius-size, @bottomleft: 0, @topleft: 0);
+}
+.paginator a.act,
+.paginator a.act:hover,
+.filter-categories a.act,
+ .content .filter-categories.new-style a.act,
+.filter-categories a.act:hover,
+.filter-switch {
+	.style-ios & {
+		color: #fff;
+		background-color: @accent-bg-color;
+	}
+	.style-ios.accent-gradient & {
+		.background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2);
+	}
+}
+.filter-categories.new-style a.act {
+	.style-ios.accent-gradient & {
+		.background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2);
+		border: none;
+		padding: 1px @base-line-height/2 + 5 1px (@base-line-height/2 + 22);
+	}
+}
+.paginator .page-links,
+.filter-categories,
+.page-nav,
+.filter-extras,
+.filter-categories a,
+.filter-categories.new-style a,
+#page .filter .filter-categories.new-style a:first-child,
+.filter-sorting,
+.paginator a:not(.paginator-more-button),
+.testimonial-item,
+.wpb_tabs.tab-style-two,
+.wpb_tour.tab-style-two,
+.tab-style-two.wpb_tabs .wpb_tabs_nav,
+.tab-style-two.wpb_tour .wpb_tabs_nav,
+.tab-style-two.wpb_tabs .wpb_tabs_nav li:before,
+.tab-style-two.wpb_tour .wpb_tabs_nav li {
+	.style-ios & {
+		border-color: @divider-bg-color;
+	}
+	.style-ios .stripe-style-1 & {
+		border-color: @strype-1-divider-bg-color;
+	}
+	.style-ios .stripe-style-2 & {
+		border-color: @strype-2-divider-bg-color;
+	}
+	.style-ios .stripe-style-3 & {
+		border-color: @strype-3-divider-bg-color;
+	}
+	.style-ios .stripe-style-4 & {
+		border-color: @strype-4-divider-bg-color;
+	}
+	.style-ios .stripe-style-5 & {
+		border-color: @strype-5-divider-bg-color;
+	}
+}
+.paginator .page-links,
+.filter-categories,
+.page-nav,
+.filter-extras,
+.filter-categories.new-style a {
+	.style-ios .content & {
+		background-color: fade(@base-color, 4%);
+	}
+}
+.paginator a.act,
+.paginator a.act:hover,
+.filter .filter-categories a.act,
+.filter .filter-categories a.act:hover {
+	.style-ios #page & {
+		color: @accent-color;
+	}
+}
+	.style-ios .filter-categories .act:before,
+	.style-ios .filter-categories .act.show-all:hover:before {
+		.filter-ico(white);
+	}
+
+	.style-ios .filter-categories .act:hover:before {
+		.filter-act-hover-ico(white)
+	}
+
+.style-ios .filter-categories a.act {
+	padding: 0 @base-line-height/2 + 4 0 (@base-line-height/2 + 21);
+}
+
+.light-bg.icons-bg .benefits-grid-ico,
+.light-hover-bg.icons-bg a.benefits-grid-ico:hover {
+	.style-ios #page & {
+		background-image: none;
+		background-color: fade(@base-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @divider-bg-color);
+	}
+	.style-ios #page .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-1-divider-bg-color);
+	}
+	.style-ios #page .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-2-divider-bg-color);
+	}
+	.style-ios #page .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-3-divider-bg-color);
+	}
+	.style-ios #page .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-4-divider-bg-color);
+	}
+	.style-ios #page .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px @strype-5-divider-bg-color);
+	}
+}
+
+
+#footer.transparent-bg {
+	.style-ios & {
+		background-color: fade(@widget-footer-color, 4%);
+		border-top: 1px solid @widget-footer-divider-bg-color;
+	}
+}
+
+
+.skill,
+.no-avatar,
+blockquote:not(.shortcode-blockquote),
+.entry-author,
+.shortcode-code,
+.block-style-widget,
+.format-link-content,
+.format-aside-content,
+.frame-on.frame-fancy,
+.format-status-content,
+.testimonial-item,
+.commentlist .comment > article,
+.br-standard .shortcode-single-caption,
+.dt-style.vc_progress_bar .vc_single_bar,
+blockquote.shortcode-blockquote.block-style-widget,
+.borderframe.br-standard .shortcode-single-image,
+.tab-style-one.wpb_content_element .wpb_tabs_nav li:not(.ui-tabs-active),
+.tab-style-one.wpb_content_element .wpb_tabs_nav li:not(.ui-tabs-active):hover,
+.tab-style-two.wpb_content_element .wpb_tabs_nav li.ui-tabs-active,
+.tab-style-two.wpb_content_element .wpb_tabs_nav li.ui-tabs-active:hover,
+.tab-style-two.wpb_content_element .wpb_tour_tabs_wrapper .wpb_tab,
+.tab-style-two.wpb_content_element.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab,
+.dt-accordion-bg-on.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header,
+.customSelect,
+.post.bg-on,
+.bg-on.team-container,
+.post.bg-on.fullwidth-img.format-quote,
+.post.bg-on.fullwidth-img.format-link,
+.fs-entry .post.bg-on.fullwidth-img,
+.bg-on .fs-entry-slide,
+.wpb_tabs.tab-style-two,
+.wpb_tour.tab-style-two,
+.tab-style-two.wpb_tour .wpb_tabs_nav li {
+	.style-ios & {
+		background-color: fade(@base-color, 4%);
+	}
+	.style-ios .sidebar & {
+		background-color: fade(@widget-sidebar-color, 4%);
+	}
+	.style-ios .footer & {
+		background-color: fade(@widget-footer-color, 4%);
+	}
+	.style-ios .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 4%);
+	}
+	.style-ios .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 4%);
+	}
+	.style-ios .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 4%);
+	}
+	.style-ios .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 4%);
+	}
+	.style-ios .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 4%);
+	}
+}
+
+.block-style-widget,
+.frame-on.frame-fancy,
+.shortcode-code,
+.format-link-content,
+.post.bg-on:not(.fullwidth-img),
+.post.bg-on.fullwidth-img.format-quote,
+.post.bg-on.fullwidth-img.format-link,
+.fs-entry .post.bg-on.fullwidth-img,
+.shortcode-single-image-wrap.br-standard.borderframe,
+.dt-accordion-bg-on.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header,
+.entry-author,
+.commentlist .comment > article,
+.bg-on.team-container,
+blockquote:not(.shortcode-blockquote),
+.no-avatar,
+.tab-style-one.wpb_content_element .wpb_tabs_nav li,
+.skill,
+.dt-style.vc_progress_bar .vc_single_bar,
+.customSelect,
+#page .quantity .plus,
+#page .quantity .minus {
+	.style-ios & {
+		.box-shadow (inset 0px 0px 0px 1px @divider-bg-color);
+	}
+	.style-ios .stripe .sidebar-content.solid-bg & {
+		.box-shadow (inset 0px 0px 0px 1px @widget-sidebar-divider-bg-color);
+	}
+	.style-ios .stripe-style-1 & {
+		.box-shadow (inset 0px 0px 0px 1px @strype-1-divider-bg-color);
+	}
+	.style-ios .stripe-style-2 & {
+		.box-shadow (inset 0px 0px 0px 1px @strype-2-divider-bg-color);
+	}
+	.style-ios .stripe-style-3 & {
+		.box-shadow (inset 0px 0px 0px 1px @strype-3-divider-bg-color);
+	}
+	.style-ios .stripe-style-4 & {
+		.box-shadow (inset 0px 0px 0px 1px @strype-4-divider-bg-color);
+	}
+	.style-ios .stripe-style-5 & {
+		.box-shadow (inset 0px 0px 0px 1px @strype-5-divider-bg-color);
+	}
+}
+
+.wf-cell .post.bg-on.fullwidth-img:not(.format-quote):not(.format-link) .blog-content,
+.wf-cell .post.bg-on.fullwidth-img .project-list-content {
+	.style-ios & {
+		border: 1px solid;
+		border-color: @divider-bg-color;
+	}
+	.style-ios .stripe-style-1 & {
+		border-color: @strype-1-divider-bg-color;
+	}
+	.style-ios .stripe-style-2 & {
+		border-color: @strype-2-divider-bg-color;
+	}
+	.style-ios .stripe-style-3 & {
+		border-color: @strype-3-divider-bg-color;
+	}
+	.style-ios .stripe-style-4 & {
+		border-color: @strype-4-divider-bg-color;
+	}
+	.style-ios .stripe-style-5 & {
+		border-color: @strype-5-divider-bg-color;
+	}
+}
+.rsContW .rsBullet:after,
+.rsContW .rsBullet.rsNavSelected:hover:after,
+.rsCont .rsBullet:after,
+.rsCont .rsBullet.rsNavSelected:hover:after,
+.tp-bullets.custom .bullet:before,
+.tp-bullets.custom .bullet.selected:hover:before,
+#main-slideshow .tp-bullets.custom .bullet:hover:before {
+	.style-ios .content & {
+		background-color: fade(@base-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@base-color, 25%));
+	}
+	.style-ios .sidebar &,
+	.style-ios .stripe .sidebar-content.solid-bg & {
+		background-color: fade(@widget-sidebar-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@widget-sidebar-color, 25%));
+	}
+	.style-ios .footer & {
+		background-color: fade(@widget-footer-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@widget-footer-color, 25%));
+	}
+	.style-ios .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@strype-1-color, 25%));
+	}
+	.style-ios .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@strype-2-color, 25%));
+	}
+	.style-ios .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@strype-3-color, 25%));
+	}
+	.style-ios .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@strype-4-color, 25%));
+	}
+	.style-ios .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 4%);
+		.box-shadow (inset 0px 0px 0px 1px fade(@strype-5-color, 25%));
+	}
+}

@@ -1,0 +1,1229 @@
+/* v1.0.3 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+.royalSlider {
+	width: 600px;
+	height: 400px;
+	position: relative;
+	direction: ltr;
+}
+.royalSlider > * {
+	float: left;
+}
+
+
+.rsWebkit3d .rsSlide,
+.rsWebkit3d.slider-content .rsContainer,
+.rsWebkit3d.slider-content .rsOverflow/*,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl*/ {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0); 
+}
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+	-webkit-transform: none;
+}
+.rsOverflow {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.rsVisibleNearbyWrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.rsVisibleNearbyWrap .rsOverflow {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+}
+.rsContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsArrow,
+.rsThumbsArrow {
+	cursor: pointer;
+}
+
+.rsThumb {
+	float: left;
+	position: relative;
+}
+
+
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+	opacity: 1;
+	-webkit-transition:opacity 0.3s linear;
+	-moz-transition:opacity 0.3s linear;
+	-o-transition:opacity 0.3s linear;
+	transition:opacity 0.3s linear;
+}
+.rsHidden {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-moz-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-o-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+
+
+.rsGCaption {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+/* Fullscreen options, very important ^^ */
+.royalSlider.rsFullscreen {
+	position: fixed !important;
+	height: auto !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 2147483647 !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+.royalSlider .rsSlide.rsFakePreloader {
+	opacity: 1 !important;
+	-webkit-transition: 0s;
+	-moz-transition: 0s;
+	-o-transition:  0s;
+	transition:  0s;
+	display: none;
+}
+
+.rsSlide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	overflow: hidden;
+	
+	height: 100%;
+	width: 100%;
+}
+
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+	height: auto;
+}
+
+.rsContent {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.rsPreloader {
+	position:absolute;
+	z-index: 0;	
+}
+
+.rsNav {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.rsNavItem {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.25);
+}
+
+.rsThumbs {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	z-index: 22;
+}
+.rsTabs {
+	float: left;
+	background: none !important;
+}
+.rsTabs,
+.rsThumbs {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+.rsVideoContainer {
+	/*left: 0;
+	top: 0;
+	position: absolute;*/
+	/*width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	float: left;*/
+	width: auto;
+	height: auto;
+	line-height: 0;
+	position: relative;
+}
+.rsVideoFrameHolder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #141414;
+	opacity: 0;
+	-webkit-transition: .3s;
+}
+.rsVideoFrameHolder.rsVideoActive {
+	opacity: 1;
+}
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+	position: absolute;
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/* ios controls over video bug, shifting video */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 44px;
+}
+
+.rsABlock {
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 15;
+	-webkit-backface-visibility: hidden;
+}
+
+.grab-cursor {
+	cursor:url(grab.png) 8 8, move; 
+}
+
+.grabbing-cursor{ 
+	cursor:url(grabbing.png) 8 8, move;
+}
+
+.rsNoDrag {
+	cursor: auto;
+}
+
+.rsLink {
+	left:0;
+	top:0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:block;	
+	z-index: 20;
+	background: url(blank.gif);
+	-webkit-backface-visibility: hidden;
+}
+
+/***********************************************************************************************************/
+/******************************
+*
+*  RoyalSlider Porthole Skin 
+* 
+******************************/
+
+.fixed .rsHomePorthole {
+	background: rgba(34, 34, 34, 0.3);
+}
+.rsHomePorthole {
+	background: #222222;
+}
+
+#main-slideshow-content {
+	display: none;	
+}
+#main-slideshow #main-slideshow-content {
+	display: block;
+}
+#main-slideshow {
+	overflow: hidden;
+}
+#main-slideshow > ul > li {
+	display: none;
+}
+
+/***************
+*
+*  Thumbnails
+*
+****************/
+.rsThumbs {	z-index: 1 !important;}
+
+.rsHomePorthole .rsThumb {
+	float: none;
+	margin: 0 auto;
+}
+
+.rsHomePorthole .rsThumbsHor {
+	width: 100%;
+	height: auto;
+}
+.rsHomePorthole .rsThumbsVer {
+	position: absolute;
+	width: 98px;
+ 	height: 370px;
+ 	top: 50%;
+ 	margin-top: -185px;
+	right: 25px;
+}
+.rsHomePorthole.rsWithThumbsHor .rsThumbsContainer {
+	position: relative;
+}
+.rsHomePorthole.rsWithThumbsVer .rsThumbsContainer {
+	position: relative;
+	width: 100%;
+	padding-top: 120px;
+}
+.rsHomePorthole .rsThumb {
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+
+	opacity: 0;
+
+	-webkit-border-radius:	90px;
+	-moz-border-radius:		90px;
+	-ms-border-radius:		90px;
+	-o-border-radius:		90px;
+	border-radius:			90px;
+
+
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:	0px 0px 3px rgba(0, 0, 0, 0.05);
+	-ms-box-shadow:		0px 0px 3px rgba(0, 0, 0, 0.05);
+	-o-box-shadow:		0px 0px 3px rgba(0, 0, 0, 0.05);
+	box-shadow:			0px 0px 3px rgba(0, 0, 0, 0.05);
+
+}
+.no-touch .rsHomePorthole .rsThumb {
+
+	-webkit-transition:	all 600ms ease;
+	-moz-transition:	all 600ms ease;
+	-ms-transition:		all 600ms ease;
+	-o-transition:		all 600ms ease;
+	transition:			all 600ms ease;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.no-touch .rsHomePorthole .rsThumb:first-child {
+
+	-webkit-transition:	all 100ms ease;
+	-moz-transition:	all 100ms ease;
+	-ms-transition:		all 100ms ease;
+	-o-transition:		all 100ms ease;
+	transition:			all 100ms ease;
+}
+
+.rsHomePorthole .rsThumb img {
+	width: 100%;
+	height: 100%;
+
+	-webkit-border-radius:	90px;
+	-moz-border-radius:		90px;
+	-ms-border-radius:		90px;
+	-o-border-radius:		90px;
+	border-radius:			90px;
+}
+
+.rsHomePorthole .rsThumb.rsNavVis {
+	opacity: 0.5;
+}
+
+.rsHomePorthole .rsThumb.rsNavPrev,
+.rsHomePorthole .rsThumb.rsNavNext {
+	width: 50px;
+	height: 50px;
+
+	opacity: 0.8;
+}
+
+.rsHomePorthole .rsThumb.rsNavSelected {
+	width: 90px;
+	height: 90px;
+
+	opacity: 1;
+}
+
+.rsHomePorthole .rsThumb.rsNavSelected img {
+
+}
+.rsHomePorthole .rsTmb {
+	display: block;
+}
+
+/* Thumbnails with text */
+.rsHomePorthole .rsTmb h5 {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+	color: #FFF;
+}
+.rsHomePorthole .rsTmb span {
+	color: #DDD;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/***************
+*
+*  Play/close video button
+*
+****************/
+.rsHomePorthole .rsVideoContainer {
+	position: absolute;
+}
+.rsHomePorthole .rsPlayBtn {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
+	width:90px;
+	height:90px;
+	margin-left:-45px;
+	margin-top:-45px;
+	cursor: pointer;
+	
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+}
+.rsHomePorthole .rsPlayBtnIcon {
+	display:block;
+	width:90px;
+	height:90px;
+	
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+
+	background-image: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%20width=%2248px%22%20height=%2248px%22%20viewBox=%220%200%2050%2050%22%20enable-background=%22new%200%200%2050%2050%22%20xml:space=%22preserve%22%3E%3Cpath%20fill=%22white%22%20d=%22M39.448,6.801h-29c-4.125,0-7.5,3.376-7.5,7.5V35.3c0,4.126,3.375,7.501,7.5,7.501h29c4.125,0,7.5-3.375,7.5-7.501V14.301C46.948,10.177,43.573,6.801,39.448,6.801z%20M43.366,34.767c0,1.216-0.49,2.366-1.378,3.236%09c-0.889,0.87-2.067,1.349-3.313,1.349H11.222c-1.246,0-2.421-0.479-3.312-1.349c-0.887-0.872-1.377-2.021-1.377-3.236V14.836c0-1.215,0.491-2.367,1.377-3.235c0.891-0.872,2.066-1.35,3.312-1.35h27.453c1.246,0,2.425,0.479,3.313,1.35c0.89,0.87,1.378,2.021,1.378,3.235V34.767z%20M18.886,33.809l16.125-9.008l-16.125-9.008V33.809z%22/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.rsHomePorthole .rsPlayBtn {
+	background-color: #000;
+	background-color: rgba(0,0,0,0.6);
+
+	-webkit-border-radius: 120px;
+	border-radius: 120px;
+}
+.old-ie .rsHomePorthole .rsPlayBtnIcon {
+	background-image: url(video-ico.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.rsHomePorthole .rsPlayBtn:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+.rsHomePorthole .rsBtnCenterer {
+	position:absolute;
+	left:50%;
+	top:50%;
+}
+.rsHomePorthole .rsCloseVideoBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 500;
+	position: absolute;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	
+}
+.rsHomePorthole .rsCloseVideoBtn.rsiOSBtn {
+	top: -38px;
+	right: -6px;
+}
+
+.rsHomePorthole .rsCloseVideoIcn {
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+	background: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%09%20width=%22512px%22%20height=%22512px%22%20viewBox=%220%200%20512%20512%22%20enable-background=%22new%200%200%20512%20512%22%20xml:space=%22preserve%22%3E%3Cpolygon%20fill=%22white%22%20points=%22438.393,374.595%20319.757,255.977%20438.378,137.348%20374.595,73.607%20255.995,192.225%20137.375,73.622%20%0973.607,137.352%20192.246,255.983%2073.622,374.625%20137.352,438.393%20256.002,319.734%20374.652,438.378%20%22/%3E%3C/svg%3E") no-repeat center center;
+	background-size: 26px 26px;
+	background-color: rgba(0,0,0,0.75);
+}
+.rsHomePorthole .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+	opacity: 1;
+}
+
+.hide-thumbnails .rsHomePorthole .rsThumb,
+.hide-thumbnails .rsHomePorthole .progress-wrapper {
+	display: none !important;
+}
+
+/***************
+*
+*  Preloader
+*
+****************/
+
+.rsHomePorthole .rsPreloader {
+	width:60px;
+	height:60px;
+	padding: 5px;
+
+	left:50%;
+	top:50%;
+	margin-left:-30px;
+	margin-top:-30px;
+}
+
+
+
+/***************
+*
+*  Caption
+*
+****************/
+.rsHomePorthole .rsCapt {
+	position: absolute;
+	top: auto;
+	bottom: 45px;
+
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:	border-box;
+	-ms-box-sizing:		border-box;
+	-o-box-sizing:		border-box;
+	box-sizing:			border-box;
+
+	text-align: center;
+	width: 100%;
+	padding: 0 140px;
+	z-index: auto;
+}
+	.overlap .rsHomePorthole .rsCapt {
+		bottom: 115px;
+	}
+/*
+	.fixed .rsHomePorthole .rsCapt {
+		padding: 0 140px 0 40px;
+	}
+*/
+
+.rsHomePorthole .rsTitle {
+	position: relative;
+	display: inline-block;
+	/*margin: 0 auto;*/
+	margin-right: 15px;
+	color: #fff;
+	vertical-align: middle;
+
+	-webkit-text-shadow:	1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-moz-text-shadow:		1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-ms-text-shadow:		1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-o-text-shadow:			1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	text-shadow:			1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.rsHomePorthole .rsDesc {
+	display: block;
+	margin: 10px auto 0 auto;
+	color: #fff;
+	vertical-align: middle;
+
+	-webkit-text-shadow:	1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-moz-text-shadow:		1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-ms-text-shadow:		1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	-o-text-shadow:			1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+	text-shadow:			1px 1px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.rsHomePorthole .rsCLink {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -45px 0 0 -45px;
+	width: 90px;
+	height: 90px;
+	/*margin: 10px auto -20px auto;*/
+	background-color: rgba(0,0,0,0.6);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 50%;
+
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+	
+	background-image: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%20width=%2235px%22%20height=%2235px%22%20viewBox=%220%200%2016%2016%22%20enable-background=%22new%200%200%2016%2016%22%20xml:space=%22preserve%22%3E%3Cpath%20fill=%22white%22%20d=%22M11.797,3.106c0.552,0.553,0.552,1.453,0,2.004l-5.07,5.074c0.945,0.249,1.991,0.016,2.73-0.725l3.344-3.345c1.109-1.108,1.109-2.904,0-4.012L12.049,1.35c-1.109-1.107-2.904-1.107-4.012,0L4.692,4.693C3.952,5.433,3.719,6.479,3.97,7.424l5.071-5.071c0.553-0.553,1.452-0.553,2.005,0L11.797,3.106z%20M11.307,11.309c0.741-0.742,0.974-1.789,0.724-2.733l-5.069,5.073c-0.554,0.553-1.453,0.553-2.004,0l-0.754-0.753%09c-0.553-0.552-0.553-1.452,0-2.008l5.072-5.069c-0.946-0.25-1.992-0.017-2.731,0.724L3.198,9.884c-1.107,1.109-1.107,2.904,0,4.013l0.752,0.753c1.108,1.108,2.904,1.108,4.012,0L11.307,11.309z%22/%3E%3C/svg%3E");
+}
+
+	.rsHomePorthole .rsCLink:hover {
+		background-color: rgba(0,0,0,0.8);
+	}
+.rsHomePorthole .rsBtnCenterer.with-link {
+	margin: -45px 0 0 -100px;
+}
+.rsHomePorthole .with-link .rsCLink,
+.rsHomePorthole .with-link .rsPlayBtn {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+/*@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+	.rsHomePorthole .rsCLink {
+		background: url("link-retina.png") no-repeat center center;
+		background-size: 100% 100%;
+	}
+}*/
+
+@media screen and (max-width: 1024px) {
+	.rsHomePorthole .rsCapt {
+		/* padding: 0 140px 0 30px; */
+	}
+		.overlap .rsHomePorthole .rsCapt {
+			bottom: 75px;
+		}
+}
+@media screen and (max-width: 800px) {
+	.rsHomePorthole .rsCapt {
+		/* padding: 0 140px 0 20px; */
+		bottom: 25px;
+	}
+		.overlap .rsHomePorthole .rsCapt {
+			bottom: 45px;
+		}
+	.rsHomePorthole .rsCLink {
+		/*width: 131px;
+		height: 25.5px;
+		margin-bottom: -6px;*/
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 760px) {
+	.rsHomePorthole .rsThumbs {
+		display: none
+	}
+	.rsHomePorthole .rsCapt {
+		/* padding: 0 50px 0 20px; */
+		padding: 0 20px;
+		bottom: 15px;
+	}
+		.overlap .rsHomePorthole .rsCapt {
+			bottom: 15px;
+		}
+}
+
+
+@media screen and (max-width: 1200px) {
+	.rsHomePorthole .rsPlayBtn,
+	.rsHomePorthole .rsCLink {
+		height: 50px;
+		margin-left: -25px;
+		margin-top: -25px;
+		width: 50px;
+	}
+	.rsHomePorthole .rsPlayBtnIcon {
+		width: 50px;
+		height: 50px;
+		background-size: 30px 30px;
+	}
+	.rsHomePorthole .rsCLink {
+		background-size: 24px 24px;
+	}
+	.rsHomePorthole .rsBtnCenterer.with-link {
+		margin: -25px 0 0 -60px;
+	}
+	.rsHomePorthole .with-link .rsCLink,
+	.rsHomePorthole .with-link .rsPlayBtn {
+		position: relative;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		margin: 0 5px;
+	}
+}
+
+
+.rsHomePorthole .progress-wrapper,
+.rsHomePorthole .progress-wrapper * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.rsHomePorthole .progress-wrapper {
+	position:  absolute;
+	z-index: 999;
+	top: 50%;
+	left: 0;
+	margin-top: -49px;
+	width: 98px;
+	height: 98px;
+
+	-webkit-transition:	opacity 150ms ease;
+	-moz-transition:	opacity 150ms ease;
+	-ms-transition:		opacity 150ms ease;
+	-o-transition:		opacity 150ms ease;
+	transition:			opacity 150ms ease;
+}
+	.rsHomePorthole .progress-wrapper.blurred {
+		opacity: 0;
+	}
+
+.rsHomePorthole .progress-controls {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 90px;
+	height: 90px;
+	opacity: 0.5;
+
+	-webkit-border-radius:	90px;
+	-moz-border-radius:		90px;
+	-ms-border-radius:		90px;
+	-o-border-radius:		90px;
+	border-radius:			90px;
+
+	background-color: rgba(0, 0, 0, 0.3);
+	background-image: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%09%20width=%2230px%22%20height=%2230px%22%20viewBox=%220%200%20512%20512%22%20enable-background=%22new%200%200%20512%20512%22%20xml:space=%22preserve%22%3E%3Cpath%20fill=%22white%22%20d=%22M217.679,462h-120V50h120V462z%20M414.321,50h-120v412h120V50z%22/%3E%3C/svg%3E");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	-webkit-transition:	opacity 150ms ease;
+	-moz-transition:	opacity 150ms ease;
+	-ms-transition:		opacity 150ms ease;
+	-o-transition:		opacity 150ms ease;
+	transition:			opacity 150ms ease;
+}
+.touch .rsHomePorthole .progress-controls {
+	background-color: transparent;
+}
+	.rsHomePorthole .progress-controls:hover {
+		opacity: 1;
+	}
+	.rsHomePorthole .paused .progress-controls {
+		background-image: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%20width=%2232px%22%20height=%2232px%22%20viewBox=%220%200%20512%20512%22%20enable-background=%22new%200%200%20512%20512%22%20xml:space=%22preserve%22%3E%09%3Cpolygon%20fill=%22white%22%20points=%22418.999,256.001%20121.001,462%20121.001,50%20%22/%3E%3C/svg%3E");
+		background-size: 32px 32px;
+		background-position: 31px center;
+	}
+
+
+
+.rsHomePorthole .progress-mask {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.rsHomePorthole .progress-spinner-left,
+.rsHomePorthole .progress-spinner-right {
+	width: 100%;
+	height: 100%;
+	border: 4px solid transparent;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+}
+
+.rsHomePorthole .progress-spinner-left.paused,
+.rsHomePorthole .progress-spinner-right.paused {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+}
+
+.rsHomePorthole .progress-spinner-left {
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+	border-right: none;
+	transform-origin: 100% 50%;
+	transform: rotate(180deg);
+	animation-name: rota-left;
+
+	-webkit-transform-origin: 100% 50%;
+	-webkit-transform: rotate(180deg);	
+	-webkit-animation-name: rota-left;
+}
+.rsHomePorthole .progress-spinner-right {
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	border-left: none;
+	transform-origin: 0 50%;
+	transform: rotate(-180deg);
+	animation-name: rota-right;
+
+	-webkit-transform-origin: 0 50%;
+	-webkit-transform: rotate(-180deg);
+	-webkit-animation-name: rota-right;
+}
+
+
+@keyframes rota-left {
+	0% {
+		transform: rotate(180deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rota-right {
+	0% {
+		transform: rotate(180deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rota-left {
+	0% {
+		-webkit-transform: rotate(180deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rota-right {
+	0% {
+		-webkit-transform: rotate(180deg);
+	}
+	50% {
+		-webkit-transform: rotate(360deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/******************************
+*
+*  RoyalSlider Default Skin 
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Caption
+*    
+*  Sprite: 'rs-default.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+* 
+******************************/
+
+
+/* Background */
+.rsShor,
+.rsShor .rsOverflow,
+.rsShor .rsSlide,
+.rsShor .rsVideoFrameHolder,
+.rsShor .rsThumbs {
+	background: #1a1a1a;
+}
+
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+
+.rsShor .rsArrow {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	z-index: 100;
+}
+.rsShor.rsVer .rsArrow {
+	width: 100%;
+	height: 44px;
+	
+}
+.rsShor.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsShor.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+
+.rsShor.rsHor .rsArrowLeft { right: 43px; bottom: 15px; }
+.rsShor.rsHor .rsArrowRight { right: 19px; bottom:15px; }
+
+.rsShor .rsArrowIcn {
+	width: 13px;
+	height: 18px;
+	top: 0;
+	left: 6px;
+
+	position: absolute;	
+	cursor: pointer;
+}
+.rsShor .rsArrowRight .rsArrowIcn {
+	left: auto;
+	right: 0px;
+}
+.rsShor .rsArrowIcn:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 19px;
+	height: 19px;
+	content: "";
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	z-index: 9;
+}
+
+
+
+.rsShor.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsShor.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+
+.rsShor.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsShor.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+
+/*.rsShor .rsArrowDisabled .rsArrowIcn { opacity: .5; filter: alpha(opacity=50);  *display: none; }*/
+
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsShor .rsBullets {
+	position: absolute;
+	z-index: 35;
+	left: 17px;
+	bottom: 14px;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	text-align: left;
+
+/*	line-height: 8px;*/
+	/*overflow: hidden;*/
+}
+.rsShor .rsBullet {
+	/*width: 8px;
+	height: 8px;*/
+	display: inline-block;
+	*display:inline; 
+	*zoom:1;
+	/*padding: 6px 4px 6px 3px;*/
+}
+.rsShor .rsBullet span {
+	display: block;
+	/*width: 8px;
+	height: 8px;
+	border-radius: 50%;*/
+}
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+.rsShor .slider-post-caption {
+	position: absolute;
+	left: 0;
+	top: auto;
+	bottom: 0;
+	width: 100%;
+}
+.rsShor .slider-post-caption p {
+	margin-bottom: 5px;
+}
+.rsShor .slider-post-inner {
+	display: inline-block;
+	padding: 5px 20px 35px;
+	margin: 0 0;
+}
+
+.rsShor .slider-post-inner * {
+	color: #fff;
+}
+.rsShor .rsGCaption {
+	position: absolute;
+	float: none;
+	bottom: 6px;
+	left: 6px;
+	text-align: left;
+
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.75);
+
+	color: #FFF;
+	padding: 2px 8px;
+	width: auto;
+	font-size: 12px;
+	border-radius: 2px;
+}
+
+/********************************************************************************************************/
+
+.rsContW {
+	position: relative;
+}
+
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsContW .rsBullets {
+	position: absolute;
+	top: 100%;
+	overflow: hidden;
+	width: 100%;
+	height: auto;/*
+	margin: 0 auto -20px;*/
+	text-align: center;
+}
+.logo-items .rsOverflow {
+	margin-bottom: 10px;
+}
+.old-ie .logo-items .rsOverflow {
+	margin-bottom: auto;
+}
+.rsContW .rsBullet {
+	display: inline-block;
+	margin: 0 1px 0 1px;
+	width: 9px;
+	height: 9px;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	-webkit-background-size: 3px 3px;
+	-moz-background-size:	 3px 3px;
+	-ms-background-size:	 3px 3px;
+	-o-background-size: 	 3px 3px;
+	background-size: 		 3px 3px;
+}
+.rsBullet:hover {
+	cursor: pointer;
+}
+
+
+
+
+/********************************************************************************************************/
+.rsCont {
+	position: relative;
+}
+
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsCont .rsBullets {
+	position: absolute;
+	bottom: -52px;/*
+	margin: 0 0 -46px 0;
+	padding-top: 26px;*/
+	width: 100%;
+	text-align: center;
+}
+
+.team-items .rsCont .rsBullets {
+	margin: 0 0 -13px 0;
+	padding-top: 3px;
+}
+.rsCont .rsBullet {
+	display: inline-block;
+	margin: 0 1px 0 1px;
+	width: 9px;
+	height: 9px;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	-webkit-background-size: 3px 3px;
+	-moz-background-size:	 3px 3px;
+	-ms-background-size:	 3px 3px;
+	-o-background-size: 	 3px 3px;
+	background-size: 		 3px 3px;
+}
+
+.rsCont .rsBullet:hover {
+	cursor: pointer;
+}
+
+/***************
+*
+*  Play/close video button
+*
+****************/
+.rsSlide .rollover-video i {
+	display: none;
+}
+.rsShor .rsBtnCenterer .rsPlayBtn {
+	position: relative;
+	z-index: 99;
+	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
+	width:88px;
+	height:76px;
+	left:50%;
+	top:50%;
+	margin-left:-44px;
+	margin-top:-38px;
+	cursor: pointer;
+}
+.rsShor .rsPlayBtnIcon {
+	display:block;
+	width:88px;
+	height:76px;
+	
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+	background-color: rgba(11, 15, 16, 0.5);
+	background-image: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%20width=%2250px%22%20height=%2250px%22%20viewBox=%220%200%2050%2050%22%20enable-background=%22new%200%200%2050%2050%22%20xml:space=%22preserve%22%3E%3Cpath%20fill=%22white%22%20d=%22M39.448,6.801h-29c-4.125,0-7.5,3.376-7.5,7.5V35.3c0,4.126,3.375,7.501,7.5,7.501h29c4.125,0,7.5-3.375,7.5-7.501V14.301C46.948,10.177,43.573,6.801,39.448,6.801z%20M43.366,34.767c0,1.216-0.49,2.366-1.378,3.236%09c-0.889,0.87-2.067,1.349-3.313,1.349H11.222c-1.246,0-2.421-0.479-3.312-1.349c-0.887-0.872-1.377-2.021-1.377-3.236V14.836c0-1.215,0.491-2.367,1.377-3.235c0.891-0.872,2.066-1.35,3.312-1.35h27.453c1.246,0,2.425,0.479,3.313,1.35c0.89,0.87,1.378,2.021,1.378,3.235V34.767z%20M18.886,33.809l16.125-9.008l-16.125-9.008V33.809z%22/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*opacity: 0.8;*/
+}
+.rsShor .rsPlayBtnIcon:hover {
+	background-color: rgba(11, 15, 16, 0.8);
+}
+
+.rsShor .rsBtnCenterer {
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.rsShor .rsCloseVideoBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 500;
+	position: absolute;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	
+}
+.rsShor .rsCloseVideoBtn.rsiOSBtn {
+	top: -38px;
+	right: -6px;
+}
+
+.rsShor .rsCloseVideoIcn {
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+	background: url("data:image/svg+xml,%3Csvg%20version=%221.1%22%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20x=%220px%22%20y=%220px%22%09%20width=%22512px%22%20height=%22512px%22%20viewBox=%220%200%20512%20512%22%20enable-background=%22new%200%200%20512%20512%22%20xml:space=%22preserve%22%3E%3Cpolygon%20fill=%22white%22%20points=%22438.393,374.595%20319.757,255.977%20438.378,137.348%20374.595,73.607%20255.995,192.225%20137.375,73.622%20%0973.607,137.352%20192.246,255.983%2073.622,374.625%20137.352,438.393%20256.002,319.734%20374.652,438.378%20%22/%3E%3C/svg%3E") no-repeat center center;
+	background-size: 26px 26px;
+	background-color: rgba(0,0,0,0.75);
+}
+.rsShor .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+	opacity: 1;
+}
+
+.video-playing .rsShor .rsThumb,
+.video-playing .rsShor .progress-wrapper {
+	display: none !important;
+}
+
+.rsSlide .rollover-video i:after {
+	background-image: none;
+}
+.rsVideoFrameHolder {
+	z-index: 100;
+}
+/***************
+*
+*  Preloader
+*
+****************/
+
+.rsShor .rsPreloader {
+	width:30px;
+	height:30px;
+	padding: 5px;
+
+	left:50%;
+	top:50%;
+	margin-left:-15px;
+	margin-top:-15px;
+	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.20);
+	-moz-box-shadow:	0px 0px 4px rgba(0, 0, 0, 0.20);
+	-ms-box-shadow:		0px 0px 4px rgba(0, 0, 0, 0.20);
+	-o-box-shadow:		0px 0px 4px rgba(0, 0, 0, 0.20);
+	box-shadow:			0px 0px 4px rgba(0, 0, 0, 0.20);
+}
+
+	.rsShor .rsPreloader .fa-spinner {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 5px 0 0 5px;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		font-size: 30px;
+		-webkit-animation: spin 2s infinite linear;
+		-moz-animation: spin 2s infinite linear;
+		-o-animation: spin 2s infinite linear;
+		animation: spin 2s infinite linear;
+	}
+
+

@@ -1,0 +1,54 @@
+
+/*****************************************************
+	!-Page title
+******************************************************/
+.page-title.solid-bg {
+	background-color: @page-title-bg-color;
+	background-image: @page-title-bg-image;
+	background-repeat: @page-title-bg-repeat;
+	background-attachment: @page-title-bg-attachment;
+	background-position: @page-title-bg-position-x @page-title-bg-position-y;
+	background-size: @page-title-bg-size;
+}
+.page-title.transparent-bg {
+	background-color: fade(@base-color, 8%);
+	.style-ios & {
+		background-color: fade(@base-color, 4%);
+		border-bottom: 1px solid @divider-bg-color;
+	}
+}
+	.page-title > .wf-wrap,
+	.article-top-bar > .wf-wrap,
+	#fancy-header > .wf-wrap {
+		width: @content-width;
+	}
+	#fancy-header.title-center > .wf-wrap,
+	#fancy-header.content-left > .wf-wrap,
+	#fancy-header.content-right > .wf-wrap {
+		max-width: @content-width;
+	}
+	.page-title .wf-container-title,
+	.page-title.full-width-line,
+	.article-top-bar .wf-container-top {
+		border-color: fade(@base-color, 15%);
+	}
+
+		.page-title h1,
+		#page .page-title .entry-title {
+			color: @page-title-color;
+		}
+		
+		.page-title .breadcrumbs li:before,
+		.page-title .breadcrumbs li:before {
+			color: fade(@base-color, 35%);
+		}
+		.page-title .breadcrumbs,
+		.page-title .breadcrumbs a {
+			color: @page-title-breadcrumbs-color;
+		}
+		.page-title .breadcrumbs li:before,
+		.page-title .breadcrumbs li:before {
+			color: fade(@page-title-breadcrumbs-color, 50%);
+		}
+
+/* Page title: end */

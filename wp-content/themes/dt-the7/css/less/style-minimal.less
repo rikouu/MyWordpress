@@ -1,0 +1,164 @@
+
+.style-minimal input[type="button"],
+.style-minimal input[type="reset"],
+.style-minimal input[type="submit"],
+.style-minimal input[type="text"],
+.style-minimal input[type="tel"],
+.style-minimal input[type="url"],
+.style-minimal input[type="email"],
+.style-minimal input[type="number"],
+.style-minimal input[type="date"],
+.style-minimal input[type="range"],
+.style-minimal input[type="password"],
+.style-minimal .dt-form input,
+.style-minimal .filter .filter-categories a:after,
+.style-minimal .paginator .page-links a:after,
+.style-minimal .tab-style-two.wpb_tour .wpb_tabs_nav li,
+.style-minimal .wpb_tour.tab-style-two .wpb_tab {
+	.border-radius;
+}
+
+.soc-ico a {
+	.style-minimal .content &{
+		background-color: fade(@base-color, 15%);
+	}
+	.style-minimal .sidebar &,
+	.style-minimal .stripe .sidebar-content.solid-bg & {
+		background-color: fade(@widget-sidebar-color, 15%);
+	}
+	.style-minimal .footer & {
+		background-color: fade(@widget-footer-color, 15%);
+	}
+	.style-minimal .stripe-style-1 & {
+		background-color: fade(@strype-1-color, 15%);
+	}
+	.style-minimal .stripe-style-2 & {
+		background-color: fade(@strype-2-color, 15%);
+	}
+	.style-minimal .stripe-style-3 & {
+		background-color: fade(@strype-3-color, 15%);
+	}
+	.style-minimal .stripe-style-4 & {
+		background-color: fade(@strype-4-color, 15%);
+	}
+	.style-minimal .stripe-style-5 & {
+		background-color: fade(@strype-5-color, 15%);
+	}
+	.style-minimal #main &,
+	.style-minimal #footer & {
+		&:hover {
+			background-color: @accent-bg-color;
+			.box-shadow (none);
+		}
+	}
+}
+
+.filter a {
+	.text-normal;
+	line-height: @base-line-height*1.5 + 4;
+	.style-minimal & {
+		.text-big;
+		line-height: @text-big-line-height*1.5 - 2;
+	}
+}
+.filter-switch {
+	line-height: @base-line-height*1.5 + 2;
+	.style-minimal & {
+		background-color: fade(@h1-color, 12%);
+	}
+}
+.paginator a {
+	.style-minimal & {
+		.text-big;
+		min-width: @text-big-line-height*1.5 - 2;
+		line-height: @text-big-line-height*1.5 - 2;
+	}
+}
+.paginator .nav-prev,
+.paginator .nav-next {
+	.style-minimal & {
+		.text-big;
+		line-height: @text-big-line-height*1.5 -2;
+	}
+}
+.paginator .nav-prev {
+	.style-minimal & {
+		padding-left: @base-line-height/2 + 10px;
+	}
+}
+.paginator .nav-next {
+	.style-minimal & {
+		padding-right: @base-line-height/2 + 10px;
+	}
+}
+.paginator .nav-prev:before,
+.paginator .nav-prev:hover:before {
+	.style-minimal & {
+		.min-nav-prev-ico(fade(@h1-color, 20%));
+	}
+}
+.paginator .nav-next:after,
+.paginator .nav-next:hover:after {
+	.style-minimal & {
+		.right-double-arrow(fade(@h1-color, 20%));
+	}
+}
+.filter-categories a:not(.act):hover,
+.paginator .page-links a:not(.act):hover {
+	.style-minimal #page & {
+		color: @backgrounds-color;
+		-webkit-text-fill-color: @backgrounds-color;
+		background: none;
+	}
+}
+.paginator a.act,
+.paginator a.act:hover,
+.filter .filter-categories a.act,
+.filter .filter-categories a.act:hover {
+	.style-minimal & {
+		color: @accent-bg-color;
+	}
+	.style-minimal.accent-gradient & {
+		.text-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2);
+	}
+}
+.style-minimal .filter .filter-categories a:hover:after,
+.style-minimal .filter .filter-categories .act:after,
+.style-minimal .paginator .page-links a:hover:after,
+.style-minimal .paginator .page-links a.act:after {
+	background-color: fade(@base-color, 8%) !important;
+}
+
+.rsContW .rsBullet:after,
+.rsContW .rsBullet.rsNavSelected:hover:after,
+.rsCont .rsBullet:after,
+.rsCont .rsBullet.rsNavSelected:hover:after,
+.tp-bullets.custom .bullet:before,
+.tp-bullets.custom .bullet.selected:hover:before,
+#main-slideshow .tp-bullets.custom .bullet:hover:before {
+	.style-minimal #page & {
+		border-color: fade(@base-color, 25%);
+	}
+	.style-minimal #page .sidebar &,
+	.style-minimal #page .stripe .sidebar-content.solid-bg & {
+		border-color: fade(@widget-sidebar-color, 25%);
+	}
+	.style-minimal #page .footer & {
+		border-color: fade(@widget-footer-color, 25%);
+	}
+	.style-minimal #page .stripe-style-1 & {
+		border-color: fade(@strype-1-color, 25%);
+	}
+	.style-minimal #page .stripe-style-2 & {
+		border-color: fade(@strype-2-color, 25%);
+	}
+	.style-minimal #page .stripe-style-3 & {
+		border-color: fade(@strype-3-color, 25%);
+	}
+	.style-minimal #page .stripe-style-4 & {
+		border-color: fade(@strype-4-color, 25%);
+	}
+	.style-minimal #page .stripe-style-5 & {
+		border-color: fade(@strype-5-color, 25%);
+	}
+}
