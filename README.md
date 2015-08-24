@@ -1,0 +1,2 @@
+# MyWordpress
+我的WordPress使用的是The_7主题，可以用来复制性创建各种网站
